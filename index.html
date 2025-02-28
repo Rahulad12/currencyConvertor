@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MudraLok</title>
-    <link rel="icon" type="image/x-icon" href="./asset/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="./asset/images/logo.png" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
@@ -37,14 +37,18 @@
             <label for="fromCurrency">From</label>
             <div class="input-box">
               <div id="from-image" class="country-image"></div>
-              <select id="fromCurrency"></select>
+              <select id="fromCurrency">
+                <option value="NPR">Nepal (NPR)</option>
+              </select>
             </div>
           </div>
           <div class="input-group">
             <label for="toCurrency">To</label>
             <div class="input-box">
               <div id="to-image" class="country-image"></div>
-              <select id="toCurrency"></select>
+              <select id="toCurrency">
+                <option value="INR">India (INR)</option>
+              </select>
             </div>
           </div>
           <button id="convertButton">Convert</button>
@@ -66,7 +70,12 @@
             >Rahul Adhikari</a
           >
         </p>
-        <p>Powered by <a href="https://www.exchangerate-api.com" target="_blank">ExchangeRate-API</a></p>
+        <p>
+          Powered by
+          <a href="https://www.exchangerate-api.com" target="_blank"
+            >ExchangeRate-API</a
+          >
+        </p>
       </div>
     </footer>
 
