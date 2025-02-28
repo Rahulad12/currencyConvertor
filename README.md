@@ -30,5 +30,5 @@ To run this project locally, follow these steps:
    ```bash
    cd currency-converter
    ```
-3. \*\*Open the index.html file in your browser:
+3. **Open the index.html file in your browser:**
    - You can directly open the index.html file in a browser, or you can use a local server like VS Code Live Server or Python's Simple HTTP Server.
