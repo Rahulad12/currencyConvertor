@@ -1,3 +1,10 @@
+/**
+ * Fetches the list of countries and their respective data from
+ * the "restcountries.com" API.
+ *
+ * @returns {Promise<Object[]>} - A promise that resolves to an array of country data
+ * @throws {Error} - if there is a problem fetching the data
+ */
 export const fetchCountry = async () => {
   try {
     const response = await fetch("https://restcountries.com/v3.1/all");

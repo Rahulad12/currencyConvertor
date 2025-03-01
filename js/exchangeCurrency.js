@@ -1,5 +1,11 @@
 import { fetchRate } from "./api/currencyApi.js";
 
+/**
+ * Sets up event listener on the convert button to calculate and display
+ * the converted currency based on the selected currencies and amount.
+ * Fetches the latest exchange rates from an external API and updates the
+ * UI with the result. Handles errors during data fetching and calculation.
+ */
 export const cacluateExchange = () => {
   const amountInput = document.getElementById("amount");
   const fromCurrencySelect = document.getElementById("fromCurrency");

@@ -1,5 +1,12 @@
 import { fetchCountry } from "./api/countryApi.js";
 
+/**
+ * Initializes and populates currency dropdowns with country data.
+ * Fetches country information, including names, currencies, and flags,
+ * from an external API. Populates the 'from' and 'to' currency dropdowns
+ * with this data and updates the corresponding country flags based on the
+ * selected currency. Handles errors during data fetching and dropdown population.
+ */
 export const Country = () => {
   const fromCurrency = document.getElementById("fromCurrency");
   const toCurrency = document.getElementById("toCurrency");
@@ -29,7 +36,9 @@ export const Country = () => {
   const populateDropdowns = async () => {
     try {
       const countryData = await extractData();
-
+      //sort country by name in alphabetical order
+      countryData.sort((a, b) => a.name.localeCompare(b.name));
+      //mapping the country data to the dropdown
       countryData.forEach((country) => {
         const option = document.createElement("option");
         option.value = country.currency;
