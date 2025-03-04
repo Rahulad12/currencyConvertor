@@ -8,11 +8,6 @@ import { fetchCountry } from "../apiService/countryApi.js";
  * selected currency. Handles errors during data fetching and dropdown population.
  */
 export const Country = (fromCurrency, toCurrency, fromImage, toImage) => {
-  // const fromCurrency = document.getElementById("fromCurrency");
-  // const toCurrency = document.getElementById("toCurrency");
-  // const fromImage = document.getElementById("from-image");
-  // const toImage = document.getElementById("to-image");
-
   const extractData = async () => {
     try {
       const countries = await fetchCountry();

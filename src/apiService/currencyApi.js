@@ -10,14 +10,13 @@ const apiUrl = `${baseURL}/${apiKey}/latest`;
  *   exchange rate data. If there is an error, it resolves to an error object
  *   with a success flag set to false and a message describing the error.
  */
-export const fetchRate = async (fromCurrency) => {
+export const fetchRate = async (from) => {
   try {
-    const response = await fetch(`${apiUrl}/${fromCurrency}`);
+    const response = await fetch(`${apiUrl}/${from}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     throw new Error({

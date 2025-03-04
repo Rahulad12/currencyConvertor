@@ -1,4 +1,5 @@
 import { fetchRate } from "../apiService/currencyApi.js";
+import { formValidator } from "../utils/formValidator.js";
 /**
  * Sets up event listener on the convert button to calculate and display
  * the converted currency based on the selected currencies and amount.
@@ -13,24 +14,25 @@ export const cacluateExchange = (
   conversionResultDiv,
   errorDiv
 ) => {
-  // const amountInput = document.getElementById("amount");
-  // const fromCurrencySelect = document.getElementById("fromCurrency");
-  // const toCurrencySelect = document.getElementById("toCurrency");
-  // const convertButtons = document.getElementById("convertButton");
-  // const conversionResultDiv = document.getElementById("conversionResult");
-  // const errorDiv = document.getElementById("error");
-
   convertButton.addEventListener("click", async () => {
-    const amount = parseFloat(amountInput.value);
+    const inputAmount = parseFloat(amountInput.value);
     const fromCurrency = fromCurrencySelect.value;
     const toCurrency = toCurrencySelect.value;
 
-    if (isNaN(amount)) {
-      errorDiv.textContent = "Please enter a valid amount.";
-      conversionResultDiv.textContent = "";
+    // Validate form input
+    if (
+      !formValidator(
+        inputAmount,
+        fromCurrency,
+        toCurrency,
+        errorDiv,
+        conversionResultDiv
+      )
+    ) {
       return;
     }
-
+    console.log("fromCurrency", fromCurrency);
+    console.log("toCurrency", toCurrency);
     // Reset previous results & show loading state
     errorDiv.textContent = "";
     conversionResultDiv.textContent = "";
@@ -40,9 +42,9 @@ export const cacluateExchange = (
     try {
       const data = await fetchRate(fromCurrency);
       if (data.conversion_rates && data.conversion_rates[toCurrency]) {
-        const rate = data.conversion_rates[toCurrency];
-        const convertedAmount = (amount * rate).toFixed(2);
-        conversionResultDiv.textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+        const currencyRate = data.conversion_rates[toCurrency];
+        const convertedAmount = (inputAmount * currencyRate).toFixed(2);
+        conversionResultDiv.textContent = `${inputAmount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
       } else {
         errorDiv.textContent =
           "Currency conversion failed. Please check selected currencies.";
