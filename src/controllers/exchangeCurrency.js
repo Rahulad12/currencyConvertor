@@ -9,7 +9,7 @@ export const cacluateExchange = (
   amountInput,
   fromCurrencySelect,
   toCurrencySelect,
-  convertButtons,
+  convertButton,
   conversionResultDiv,
   errorDiv
 ) => {
@@ -20,7 +20,7 @@ export const cacluateExchange = (
   // const conversionResultDiv = document.getElementById("conversionResult");
   // const errorDiv = document.getElementById("error");
 
-  convertButtons.addEventListener("click", async () => {
+  convertButton.addEventListener("click", async () => {
     const amount = parseFloat(amountInput.value);
     const fromCurrency = fromCurrencySelect.value;
     const toCurrency = toCurrencySelect.value;

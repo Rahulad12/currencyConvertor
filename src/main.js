@@ -91,18 +91,18 @@ document.querySelector("#app").innerHTML = `
 
 // Initialize the currency conversion functionality
 cacluateExchange(
-  document.querySelector("#amount"),            // User input amount
-  document.querySelector("#fromCurrency"),      // Selected 'from' currency
-  document.querySelector("#toCurrency"),        // Selected 'to' currency
-  document.querySelector("#convertButton"),     // Convert button
-  document.querySelector("#conversionResult"),  // Display conversion result
-  document.querySelector("#error")              // Display error messages (if any)
+  document.querySelector("#amount"), // User input amount
+  document.querySelector("#fromCurrency"), // Selected 'from' currency
+  document.querySelector("#toCurrency"), // Selected 'to' currency
+  document.querySelector("#convertButton"), // Convert button
+  document.querySelector("#conversionResult"), // Display conversion result
+  document.querySelector("#error") // Display error messages (if any)
 );
 
 // Initialize the country selection dropdown and flag images
 Country(
-  document.querySelector("#fromCurrency"),      // 'From' currency dropdown
-  document.querySelector("#toCurrency"),        // 'To' currency dropdown
-  document.querySelector("#from-image"),        // 'From' currency flag image
-  document.querySelector("#to-image")           // 'To' currency flag image
+  document.querySelector("#fromCurrency"), // 'From' currency dropdown
+  document.querySelector("#toCurrency"), // 'To' currency dropdown
+  document.querySelector("#from-image"), // 'From' currency flag image
+  document.querySelector("#to-image") // 'To' currency flag image
 );
