@@ -1,6 +1,6 @@
 # Currency Converter
 
-A simple **Currency Converter** web application built using **HTML**, **CSS**, and **JavaScript**. This app allows users to convert currencies dynamically, fetches live exchange rates using an API, and displays country flags next to the currencies.
+A simple **Currency Converter** web application built using VITE Vanila. This app allows users to convert currencies dynamically, fetches live exchange rates using an API, and displays country flags next to the currencies.
 
 ## Features
 
@@ -36,12 +36,6 @@ To run this project locally, follow these steps:
    ```bash
    npm run dev
    ```
-3. **Open the index.html file in your browser:**
-   - You can directly open the index.html file in a browser, or you can use a local server like VS Code Live Server or Python's Simple HTTP Server.
-
-# API Source
-
-**exchangeRate-API**
 
 # Developer Details
 
