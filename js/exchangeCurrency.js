@@ -1,5 +1,4 @@
 import { fetchRate } from "./api/currencyApi.js";
-
 /**
  * Sets up event listener on the convert button to calculate and display
  * the converted currency based on the selected currencies and amount.
@@ -33,7 +32,6 @@ export const cacluateExchange = () => {
 
     try {
       const data = await fetchRate(fromCurrency);
-
       if (data.conversion_rates && data.conversion_rates[toCurrency]) {
         const rate = data.conversion_rates[toCurrency];
         const convertedAmount = (amount * rate).toFixed(2);
