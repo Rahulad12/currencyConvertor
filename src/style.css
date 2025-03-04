@@ -1,0 +1,173 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header and Hero Section */
+header {
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.chart-container {
+  padding: 2rem;
+  width: 50%;
+}
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Converter Container */
+.converter-container {
+  /* width: 50%; */
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.converter-box {
+  padding: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #007bff;
+}
+
+.input-box {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  gap: 0.5rem;
+}
+
+.country-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flag-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+button#convertButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button#convertButton:hover {
+  background: #0056b3;
+}
+
+/* Result and Loading */
+.result {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.loading {
+  display: none;
+  font-size: 1rem;
+  color: #007bff;
+}
+
+.conversion-result {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .converter-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}

@@ -1,109 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="MudraLok - A real-time currency converter tool to convert currencies like NPR to INR with the latest exchange rates."
-    />
-    <meta
-      name="keywords"
-      content="currency converter, NPR to INR, exchange rate, real-time currency conversion, MudraLok"
-    />
-    <meta name="author" content="Rahul Adhikari" />
-    <meta property="og:title" content="MudraLok - Currency Converter" />
-    <meta
-      property="og:description"
-      content="Convert currencies in real-time with the latest exchange rates."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.mudralok.com" />
-    <meta property="og:image" content="./asset/images/logo.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MudraLok - Currency Converter" />
-    <meta
-      name="twitter:description"
-      content="Convert currencies in real-time with the latest exchange rates."
-    />
-    <meta name="twitter:image" content="./asset/images/logo.png" />
-    <link rel="icon" type="image/x-icon" href="./asset/images/logo.png" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>MudraLok - Real-Time Currency Converter</title>
+    <title>Vite App</title>
   </head>
   <body>
-    <!-- Header with Hero Section -->
-    <header>
-      <div class="hero">
-        <h1>MudraLok - Currency Converter</h1>
-        <p>Convert currencies in real-time with the latest exchange rates.</p>
-      </div>
-    </header>
-
-    <!-- Main Converter Section -->
-    <main>
-      <div class="converter-container">
-        <div class="converter-box">
-          <div class="input-group">
-            <label for="amount">Amount</label>
-            <input
-              type="number"
-              id="amount"
-              placeholder="Enter amount"
-              min="0"
-            />
-          </div>
-          <div class="input-group">
-            <label for="fromCurrency">From</label>
-            <div class="input-box">
-              <div id="from-image" class="country-image"></div>
-              <select id="fromCurrency">
-                <option value="NPR">Nepal (NPR)</option>
-              </select>
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="toCurrency">To</label>
-            <div class="input-box">
-              <div id="to-image" class="country-image"></div>
-              <select id="toCurrency">
-                <option value="INR">India (INR)</option>
-              </select>
-            </div>
-          </div>
-          <button id="convertButton">Convert</button>
-          <div id="result" class="result">
-            <div id="loading" class="loading"></div>
-            <div id="conversionResult" class="conversion-result"></div>
-          </div>
-          <div id="error" class="error"></div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-      <div class="footer-content">
-        <p>
-          Created By
-          <a href="https://www.adhikarirahul.com.np/" target="_blank"
-            >Rahul Adhikari</a
-          >
-        </p>
-        <p>
-          Powered by
-          <a href="https://www.exchangerate-api.com" target="_blank"
-            >ExchangeRate-API</a
-          >
-        </p>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="./js/index.js" type="module"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
