@@ -28,6 +28,7 @@ export const Country = (fromCurrency, toCurrency, fromImage, toImage) => {
     }
   };
 
+  
   const populateDropdowns = async () => {
     try {
       const countryData = await extractData();
